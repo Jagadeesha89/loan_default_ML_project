@@ -1,0 +1,19 @@
+[project]
+name = "loan-default-ml-project"
+version = "0.1.0"
+description = "This is the end to end MLOps project"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "certifi>=2025.8.3",
+    "fastapi[standard]>=0.117.1",
+    "mlflow>=3.4.0",
+    "numpy>=2.2.6",
+    "pandas>=2.3.2",
+    "pyaml>=25.7.0",
+    "pymongo>=4.15.1",
+    "python-dotenv>=1.1.1",
+    "scikit-learn>=1.7.2",
+    "uvicorn>=0.36.0",
+    "xgboost>=3.0.5",
+]
