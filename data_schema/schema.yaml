@@ -31,7 +31,7 @@ one_hot_enc:
   - HasMortgage
   - HasCoSigner
 
-stand_sccaler:
+stand_scaler:
   - CreditScore
   - Income
   - LoanAmount
