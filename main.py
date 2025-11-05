@@ -4,8 +4,9 @@ from src.logging.logger import logging
 from src.components.data_ingestion import DataIngestion
 from src.components.data_validation import DataValidation
 from src.components.data_transformation import DataTranformation
+from src.components.model_trainer import ModelTrainer
 from src.entity.config_entity import TrainingPipelineConfig
-from src.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTransformationConfig
+from src.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTransformationConfig,ModelTrainerConfig
 
 
 if __name__ == "__main__":
@@ -28,6 +29,10 @@ if __name__ == "__main__":
         logging.info(f"Inititating the data transformation stage at main.py")
         data_transformation_artifact=data_transformation.initiate_data_transformation()
         print(data_transformation_artifact)
+        model_trainer_config=ModelTrainerConfig(training_pipeline_config=trainig_pipeline_config)
+        model_trainer=ModelTrainer(model_trainer_config=model_trainer_config,data_transformation_artifact=data_transformation_artifact)
+        logging.info(f"Initiating the model trainer stage at main.py")
+        model_trainer_artifact=model_trainer.initiate_model_trainer()
     except Exception as e:
         raise LoanDefaultException(e,sys)
     

@@ -17,6 +17,8 @@ TRAIN_FILE_NAME:str="train.csv"
 TEST_FILE_NAME:str="test.csv"
 
 SCHEMA_FILE_PATH:str = os.path.join('data_schema','schema.yaml')
+SAVED_MODEL_DIR:str =os.path.join("saved_models")
+MODEL_FILE_NAME:str = "model.pkl"
 
 
 """
@@ -52,3 +54,15 @@ DATA_TRANSFORAMATION_DIR:str = "data_transfroamtion"
 DATA_TRANSFORMATION_TRANSFORMED_DIR:str = "transformed"
 DATA_TRANSFORMATION_TRANSFORMED_OBJECT:str = "transformed_object"
 PREPROCESSING_OBJECT_FILE_NAME:str = "preprocesser.pkl"
+
+
+"""
+Define the constant variable for model trainer
+
+"""
+
+MODEL_TRAINER_DIR_NAME:str = "model_trainer"
+MODEL_TRAINER_TRAINED_MODEL:str = "trained_model"
+MODEL_TRAINER_TRAINED_MODEL_NAME:str = "model.pkl"
+MODEL_TRAINER_EXPECTED_SCORE:float = 0.6
+MODEL_TRAINER_OVER_FIT_UNDER_FIT_THRESHOLD:float = 0.05
